@@ -3,9 +3,6 @@ import React from "react";
 const Skills = () => {
     return (
         <section id="skills" style={styles.section}>
-            <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                Skills
-            </h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <li className="bg-white p-4 rounded shadow">React.js</li>
                 <li className="bg-white p-4 rounded shadow">

@@ -1,12 +1,14 @@
 .skills-section {
     padding: 20px;
     background-color: #f9f9f9;
+    height: 100vh;
 }
 
 .skills-section h2 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 .skills-category {

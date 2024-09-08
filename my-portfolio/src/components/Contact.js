@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <section id="contact" className="mb-10">
+        <section id="contact" className="mb-10 h-full">
             <div
                 className="max-w-md mx-auto p-4 md:p-6 lg:p-8 bg-slate-100 rounded shadow-lg mt-24"
                 id="contact"

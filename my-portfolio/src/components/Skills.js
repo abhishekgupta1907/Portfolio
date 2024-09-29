@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
     FaHtml5,
     FaCss3Alt,
@@ -16,9 +16,21 @@ import {
     SiExpress,
     SiVisualstudiocode,
 } from "react-icons/si";
-import "./Skills.css"; // Same CSS as before
+import gsap from "gsap";
+import "./Skills.css";
 
 const Skills = () => {
+    const skillsSectionRef = useRef(null);
+
+    useEffect(() => {
+        // Animate the skills section when it comes into view
+        gsap.fromTo(
+            skillsSectionRef.current.querySelectorAll(".skill-item"),
+            { opacity: 0, y: 50 }, // Initial state
+            { opacity: 1, y: 0, duration: 1, stagger: 0.2 } // Final state
+        );
+    }, []);
+
     const frontendSkills = [
         { name: "HTML", icon: <FaHtml5 /> },
         { name: "CSS", icon: <FaCss3Alt /> },
@@ -56,7 +68,7 @@ const Skills = () => {
     );
 
     return (
-        <div className="skills-section" id="skills">
+        <div className="skills-section" id="skills" ref={skillsSectionRef}>
             <h2>Skills</h2>
 
             <div className="skills-category">

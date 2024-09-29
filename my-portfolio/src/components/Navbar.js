@@ -3,11 +3,11 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
     return (
-        <nav style={styles.navbar} className="bg-blue-300 flex justify-between">
+        <nav style={styles.navbar} className="bg-white flex justify-between">
             <h1 className="ml-16 text-4xl">Abhishek Gupta Portfolio</h1>
             <div className="mr-24 mt-2 text-lg">
                 <Link
-                    to="about"
+                    to="Intro"
                     smooth={true}
                     duration={500}
                     style={styles.link}
@@ -52,7 +52,7 @@ const styles = {
         zIndex: 1000,
     },
     link: {
-        color: "#fff",
+        color: "#000",
         margin: "0 15px",
         cursor: "pointer",
         textDecoration: "none",

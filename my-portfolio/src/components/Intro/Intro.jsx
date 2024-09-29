@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
@@ -10,16 +10,11 @@ import FloatinDiv from "../FloatingDiv/FloatingDiv";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
-import { themeContext } from "../../context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 const Intro = () => {
     // Transition
     const transition = { duration: 2, type: "spring" };
-
-    // context
-    const theme = useContext(themeContext);
-    const darkMode = theme.state.darkMode;
 
     return (
         <div className="Intro" id="Intro">
@@ -27,9 +22,7 @@ const Intro = () => {
             <div className="i-left">
                 <div className="i-name">
                     {/* yahan change hy darkmode ka */}
-                    <span style={{ color: darkMode ? "white" : "" }}>
-                        Hy! I Am
-                    </span>
+                    <span>Hy! I Am</span>
                     <span>Abhishek Gupta</span>
                     <span
                         style={{

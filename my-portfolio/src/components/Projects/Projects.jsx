@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import "./Portfolio.css";
+import React from "react";
+import "./Projects.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { themeContext } from "../../context";
+
 const projectData = [
     {
         name: "Food Ordering Website",
@@ -29,15 +29,11 @@ const projectData = [
         githubLink: "https://github.com/abhishekgupta1907/Blog-Website",
     },
 ];
-const Portfolio = () => {
-    const theme = useContext(themeContext);
-    const darkMode = theme.state.darkMode;
+const Projects = () => {
     return (
         <div className="portfolio" id="projects">
             {/* heading */}
-            <span style={{ color: darkMode ? "white" : "" }}>
-                Recent Projects
-            </span>
+            <span>Recent Projects</span>
             <span>Links</span>
 
             {/* slider */}
@@ -67,4 +63,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default Projects;
